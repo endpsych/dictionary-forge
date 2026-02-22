@@ -1,0 +1,52 @@
+
+templates:
+  standard_timestamp:
+    label: "📅 Standard Chronological Anchor"
+    analytical_type: "time_index"
+    data_type: "datetime64"
+    role: "time_index"
+    constraints:
+      nullable: false
+      monotonicity: "strictly_increasing"
+      frequency: "D"
+    cleaning:
+      missing_strategy: "ffill"
+    visualization:
+      preferred_plot: "line_chart"
+
+  primary_key_id:
+    label: "🔑 Primary Key (Internal ID)"
+    analytical_type: "discrete"
+    data_type: "int64"
+    role: "id"
+    constraints:
+      nullable: false
+      unique: true
+    database_mapping:
+      is_primary_key: true
+    visualization:
+      preferred_plot: "not_needed"
+
+  spanish_tax_entity:
+    label: "🇪🇸 Spanish Fiscal Entity (CIF/NIF)"
+    analytical_type: "nominal"
+    data_type: "string"
+    role: "group"
+    constraints:
+      nullable: false
+      regex_pattern: "Spanish CIF (Company Tax ID)"
+    governance:
+      sensitivity: "Confidential"
+      pii_flag: false
+      compliance_scope: ["LOPDGDD (ES)", "PBC/FT (ES)"]
+
+  financial_amount_euro:
+    label: "💶 Monetary Value (EUR)"
+    analytical_type: "continuous"
+    data_type: "float64"
+    role: "feature"
+    cleaning:
+      standardization_strategy: "robust"
+      outlier_strategy: "clip"
+    visualization:
+      preferred_plot: "histogram"

@@ -1,0 +1,104 @@
+{
+    "user_templates": {
+        "psychometric_likert_item": {
+            "analytical_type": "ordinal",
+            "data_type": "category",
+            "role": "feature",
+            "constraints": {
+                "unique": false,
+                "nullable": true,
+                "allowed_values": [
+                    "Strongly Disagree",
+                    "Disagree",
+                    "Neutral",
+                    "Agree",
+                    "Strongly Agree"
+                ],
+                "ordinal_mapping": {
+                    "Strongly Disagree": 1,
+                    "Disagree": 2,
+                    "Neutral": 3,
+                    "Agree": 4,
+                    "Strongly Agree": 5
+                }
+            },
+            "cleaning": {
+                "missing_strategy": "keep"
+            },
+            "visualization": {
+                "preferred_plot": "histogram"
+            },
+            "governance": {
+                "data_steward": "Ender De Freitas",
+                "source_system": "Test administration platform",
+                "sensitivity": "Confidential",
+                "pii_flag": false,
+                "masking_strategy": "Clear Text",
+                "compliance_scope": [
+                    "GDPR (EU)"
+                ]
+            },
+            "database_mapping": {
+                "target_table": "survey items",
+                "is_primary_key": false,
+                "foreign_key_reference": "test taker"
+            },
+            "label": "psychometric likert item"
+        },
+        "glorf7": {
+            "analytical_type": "continuous",
+            "data_type": "float64",
+            "role": "feature",
+            "constraints": {
+                "unique": false,
+                "nullable": true
+            },
+            "cleaning": {
+                "missing_strategy": "keep",
+                "outlier_strategy": "keep"
+            },
+            "visualization": {
+                "preferred_plot": "not_needed"
+            },
+            "governance": {
+                "sensitivity": "Public",
+                "pii_flag": false,
+                "masking_strategy": "Clear Text"
+            },
+            "database_mapping": {
+                "is_primary_key": false
+            },
+            "label": "glorf7"
+        },
+        "lolz": {
+            "analytical_type": "continuous",
+            "data_type": "float64",
+            "role": "feature",
+            "constraints": {
+                "min_value": 0.2,
+                "max_value": 0.2,
+                "unique": false,
+                "nullable": true
+            },
+            "cleaning": {
+                "missing_strategy": "keep",
+                "outlier_strategy": "keep"
+            },
+            "visualization": {
+                "preferred_plot": "not_needed"
+            },
+            "governance": {
+                "sensitivity": "Confidential",
+                "pii_flag": true,
+                "masking_strategy": "Partial Masking",
+                "compliance_scope": [
+                    "LSSI-CE (ES)"
+                ]
+            },
+            "database_mapping": {
+                "is_primary_key": false
+            },
+            "label": "lolz"
+        }
+    }
+}

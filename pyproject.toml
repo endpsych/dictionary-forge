@@ -1,0 +1,43 @@
+[project]
+name = "dictionary-forge"
+version = "0.1.0"
+description = "A multipurposes data dictionary generator."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "pyyaml>=6.0.3",
+    "streamlit>=1.54.0",
+    "xlsxwriter>=3.2.9",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.9.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+# ==============================================================================
+# Ruff Configuration (Linter & Formatter)
+# ==============================================================================
+[tool.ruff]
+# 120 is the modern standard for data/Streamlit projects (88 or 79 is too narrow)
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes (catches unused imports and variables)
+    "I",   # isort (automatically sorts your imports)
+    "UP",  # pyupgrade (forces modern Python syntax)
+    "N",   # pep8-naming (enforces proper naming conventions)
+    "PD",  # pandas-vet (checks for pandas anti-patterns)
+]
+
+ignore = [
+    "E501", # Ignore line-length for strings (handled by ruff format naturally)
+]

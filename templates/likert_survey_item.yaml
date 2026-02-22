@@ -1,0 +1,36 @@
+name: survey item
+alias: ''
+description: likert survey item data collection format
+analytical_type: ordinal
+data_type: category
+role: feature
+constraints:
+  unique: false
+  nullable: true
+  allowed_values:
+  - Strongly Disagree
+  - Disagree
+  - Neutral
+  - Agree
+  - Strongly Agree
+  ordinal_mapping:
+    Strongly Disagree: 1
+    Disagree: 2
+    Neutral: 3
+    Agree: 4
+    Strongly Agree: 5
+cleaning:
+  missing_strategy: keep
+  outlier_strategy: keep
+visualization:
+  preferred_plot: histogram
+governance:
+  sensitivity: Internal
+  masking_strategy: none
+  pii_flag: false
+  retention_period: 7 Years
+  update_frequency: Static
+database_mapping:
+  target_table: survey items
+  target_column: item
+  is_primary_key: false

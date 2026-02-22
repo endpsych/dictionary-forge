@@ -1,0 +1,12 @@
+name: entity_id_template
+alias: ID
+description: Unique identifier for a business entity (Customer, Order, etc.)
+analytical_type: Categorical
+data_type: String
+role: ID
+constraints:
+  is_unique: true
+  is_nullable: false
+governance:
+  pii_flag: false
+  sensitivity: Internal

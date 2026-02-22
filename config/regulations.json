@@ -1,0 +1,128 @@
+{
+    "GDPR": {
+        "full_name": "General Data Protection Regulation",
+        "jurisdiction": "EU",
+        "description": "Primary EU law on data protection and privacy.",
+        "url": "https://gdpr-info.eu/"
+    },
+    "EU AI Act": {
+        "full_name": "Artificial Intelligence Act",
+        "jurisdiction": "EU",
+        "description": "Risk-based framework regulating AI development and deployment.",
+        "url": "https://artificialintelligenceact.eu/"
+    },
+    "DGA": {
+        "full_name": "Data Governance Act",
+        "jurisdiction": "EU",
+        "description": "Framework to facilitate cross-border data sharing.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R0868"
+    },
+    "Data Act": {
+        "full_name": "EU Data Act",
+        "jurisdiction": "EU",
+        "description": "Rules on fair access to and use of IoT generated data.",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R2854"
+    },
+    "MiFID II": {
+        "full_name": "Markets in Financial Instruments Directive",
+        "jurisdiction": "EU",
+        "description": "Regulates financial markets and mandates transparency.",
+        "url": "https://www.esma.europa.eu/mifid-ii"
+    },
+    "PSD2 / PSD3": {
+        "full_name": "Payment Services Directive",
+        "jurisdiction": "EU",
+        "description": "Regulates electronic payments and Open Banking data access.",
+        "url": "https://www.eba.europa.eu/regulation-and-policy/payment-services-and-electronic-money/"
+    },
+    "DORA": {
+        "full_name": "Digital Operational Resilience Act",
+        "jurisdiction": "EU",
+        "description": "IT risk management for financial entities.",
+        "url": "https://www.digital-operational-resilience-act.com/"
+    },
+    "SEPBLAC": {
+        "full_name": "Ley 10/2010 (Prevenci\u00f3n de Blanqueo)",
+        "jurisdiction": "Spain",
+        "description": "Spanish AML/CTF law requiring strict KYC data collection.",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2010-6727"
+    },
+    "PCI-DSS": {
+        "full_name": "Payment Card Industry Data Security Standard",
+        "jurisdiction": "Global",
+        "description": "Technical standard for securing cardholder data.",
+        "url": "https://www.pcisecuritystandards.org/"
+    },
+    "GLBA": {
+        "full_name": "Gramm-Leach-Bliley Act",
+        "jurisdiction": "US",
+        "description": "US law requiring financial institutions to protect consumer info.",
+        "url": "https://www.ftc.gov/business-guidance/privacy-data-security/gramm-leach-bliley-act"
+    },
+    "SOX": {
+        "full_name": "Sarbanes-Oxley Act",
+        "jurisdiction": "US",
+        "description": "Financial record-keeping and internal data controls.",
+        "url": "https://www.sec.gov/spotlight/sarbanes-oxley.htm"
+    },
+    "HIPAA": {
+        "full_name": "Health Insurance Portability and Accountability Act",
+        "jurisdiction": "US",
+        "description": "US standard protecting sensitive health information.",
+        "url": "https://www.hhs.gov/hipaa/index.html"
+    },
+    "Ley 41/2002": {
+        "full_name": "Ley de Autonom\u00eda del Paciente",
+        "jurisdiction": "Spain",
+        "description": "Spanish law governing the privacy of clinical medical records.",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-22103"
+    },
+    "EHDS": {
+        "full_name": "European Health Data Space",
+        "jurisdiction": "EU",
+        "description": "Framework for cross-border exchange of health data.",
+        "url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space_en"
+    },
+    "LSSI-CE": {
+        "full_name": "Ley de Servicios de la Sociedad de la Informaci\u00f3n",
+        "jurisdiction": "Spain",
+        "description": "Spanish law regulating e-commerce and cookie data.",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758"
+    },
+    "DSA": {
+        "full_name": "Digital Services Act",
+        "jurisdiction": "EU",
+        "description": "Regulation for platform accountability and transparency.",
+        "url": "https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-services-act_en"
+    },
+    "DMA": {
+        "full_name": "Digital Markets Act",
+        "jurisdiction": "EU",
+        "description": "EU law preventing gatekeepers from unfair data use.",
+        "url": "https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/digital-markets-act_en"
+    },
+    "Law 5/2019": {
+        "full_name": "Ley Hipotecaria",
+        "jurisdiction": "Spain",
+        "description": "Spanish mortgage law requiring data transparency.",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814"
+    },
+    "Solvency II": {
+        "full_name": "Directive 2009/138/EC",
+        "jurisdiction": "EU",
+        "description": "EU directive mandating Data Quality for insurance modeling.",
+        "url": "https://www.eiopa.europa.eu/browse/regulation-and-policy/solvency-ii_en"
+    },
+    "LOSSEAR": {
+        "full_name": "Ley de Ordenaci\u00f3n de Entidades Aseguradoras",
+        "jurisdiction": "Spain",
+        "description": "Spanish transposition of Solvency II for insurance data.",
+        "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2015-7897"
+    },
+    "IDD": {
+        "full_name": "Insurance Distribution Directive",
+        "jurisdiction": "EU",
+        "description": "EU rules on data transparency when selling insurance.",
+        "url": "https://www.eiopa.europa.eu/browse/regulation-and-policy/insurance-distribution-directive-idd_en"
+    }
+}

@@ -1,0 +1,10 @@
+name: boolean_flag_template
+alias: Is_Active
+description: Binary status indicator (True/False or 1/0).
+analytical_type: Categorical
+data_type: Boolean
+role: Dimension
+constraints:
+  is_nullable: false
+visualization:
+  preferred_chart: Bar Chart

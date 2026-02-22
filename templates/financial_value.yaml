@@ -1,0 +1,12 @@
+name: financial_value_template
+alias: Amount
+description: Monetary value representing revenue, cost, or price.
+analytical_type: Continuous
+data_type: Float
+role: Measure
+constraints:
+  min_value: 0.0
+  is_nullable: false
+governance:
+  pii_flag: false
+  sensitivity: Confidential

@@ -1,0 +1,35 @@
+variable_schema:
+- description: Column name
+  dtype: string
+  name: name
+  required: true
+- description: Definition
+  dtype: string
+  name: description
+  required: true
+- dtype: enum
+  name: role
+  options:
+  - target
+  - feature
+  - id
+  - time_index
+  required: true
+- dtype: enum
+  name: sensitivity
+  options:
+  - Public
+  - Internal
+  - Confidential
+  required: true
+- dtype: dict
+  fields:
+  - dtype: number
+    name: min_value
+  - dtype: number
+    name: max_value
+  - default: true
+    dtype: boolean
+    name: nullable
+  name: constraints
+  required: false

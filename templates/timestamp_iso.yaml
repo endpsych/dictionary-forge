@@ -1,0 +1,11 @@
+name: timestamp_iso_template
+alias: Event_Timestamp
+description: System-generated timestamp in ISO-8601 format (UTC).
+analytical_type: Continuous
+data_type: DateTime
+role: Dimension
+constraints:
+  is_nullable: false
+governance:
+  pii_flag: false
+  sensitivity: Internal

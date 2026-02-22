@@ -1,0 +1,108 @@
+# ==============================================================================
+# MASTER METADATA DEFINITION
+# ==============================================================================
+
+variable_schema:
+  # ----------------------------------------------------------------------------
+  # 1. IDENTITY & CONTEXT (The "Human" Layer)
+  # ----------------------------------------------------------------------------
+  - name: "name"
+    dtype: "string"
+    required: true
+    description: "The exact column name in the raw dataset."
+
+  - name: "alias"
+    dtype: "string"
+    required: false
+    description: "A human-readable label for charts and reports."
+
+  - name: "description"
+    dtype: "string"
+    required: true
+    description: "Detailed explanation of what the variable represents."
+
+  - name: "sensitivity"
+    dtype: "enum"
+    required: true
+    options: ["Public", "Internal", "Confidential", "PII", "Restricted"]
+    default: "Internal"
+    description: "Data privacy classification."
+
+  # ----------------------------------------------------------------------------
+  # 2. SEMANTIC LOGIC (The "Analysis" Layer)
+  # ----------------------------------------------------------------------------
+  - name: "role"
+    dtype: "enum"
+    required: true
+    options: ["target", "feature", "id", "time_index", "group", "metadata"]
+    description: "How the variable functions in the analysis."
+
+  - name: "analytical_type"
+    dtype: "enum"
+    required: true
+    options: ["continuous", "discrete", "nominal", "ordinal", "binary", "text", "spatial"]
+    description: "The mathematical nature of the data."
+
+  - name: "data_type"
+    dtype: "enum"
+    required: true
+    options: ["int64", "float64", "object", "string", "bool", "datetime64", "category"]
+    description: "The technical storage format (Pandas/Polars dtype)."
+
+  # ----------------------------------------------------------------------------
+  # 3. VALIDATION CONSTRAINTS (The "Gatekeeper" Layer)
+  # ----------------------------------------------------------------------------
+  - name: "constraints"
+    dtype: "dict"
+    required: false
+    fields:
+      - name: "min_value"
+        dtype: "number"
+      - name: "max_value"
+        dtype: "number"
+      - name: "allowed_values"
+        dtype: "list"
+      - name: "regex_pattern"
+        dtype: "string"
+      - name: "unique"
+        dtype: "boolean"
+      - name: "nullable"
+        dtype: "boolean"
+        default: true
+
+  # ----------------------------------------------------------------------------
+  # 4. DATA CLEANING (The "Repair" Layer)
+  # ----------------------------------------------------------------------------
+  - name: "cleaning"
+    dtype: "dict"
+    required: false
+    fields:
+      - name: "missing_strategy"
+        dtype: "enum"
+        options: ["drop_row", "drop_col", "mean", "median", "mode", "constant", "ffill"]
+      - name: "fill_value"
+        dtype: "any"
+        description: "Value to use if strategy is 'constant'."
+      - name: "outlier_strategy"
+        dtype: "enum"
+        options: ["keep", "clip", "drop", "flag"]
+      - name: "outlier_threshold"
+        dtype: "number"
+        default: 3.0
+
+  # ----------------------------------------------------------------------------
+  # 5. VISUALIZATION (The "Report" Layer)
+  # ----------------------------------------------------------------------------
+  - name: "visualization"
+    dtype: "dict"
+    required: false
+    fields:
+      - name: "preferred_plot"
+        dtype: "enum"
+        options: ["histogram", "box", "bar", "line", "scatter", "heatmap"]
+      - name: "plot_color"
+        dtype: "string"
+        description: "Hex code (e.g., #FF0000)."
+      - name: "formatting"
+        dtype: "string"
+        description: "Format string (e.g., '${:,.2f}')."

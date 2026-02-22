@@ -1,0 +1,11 @@
+name: geo_region_iso_template
+alias: Country_Code
+description: Two-letter ISO-3166 alpha-2 country or region code.
+analytical_type: Categorical
+data_type: String
+role: Dimension
+constraints:
+  regex_pattern: "^[A-Z]{2}$"
+  is_nullable: false
+cleaning:
+  force_uppercase: true
