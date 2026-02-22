@@ -6,6 +6,10 @@ Dictionary Forge is a professional-grade application designed to bridge the gap 
 
 ---
 
+
+![App Screenshot](assets/app_screenshot.png)
+
+
 ---
 
 ## 🚀 Installation & Launch
@@ -37,7 +41,6 @@ uv sync
 # 3. Run the application
 uv run streamlit run src/app.py
 ```
-
 
 ## ✨ Core Features
 
